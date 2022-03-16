@@ -1,4 +1,1 @@
-# ProjetCSGO-NSI
-Projet d'NSI de Jaurel Flavio et Gabin sur Counter-Strike:Global Offensive
-
-> omo
+Gabin est gay il vient de me toucher la cuisse
