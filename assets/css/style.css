@@ -10,6 +10,7 @@
   body {
     background: linear-gradient(105deg, #1f04f9, #f700ee);
     background-size: 400% 400%;
+    
 
     -webkit-animation: AnimationName 9s ease infinite;
     -moz-animation: AnimationName 9s ease infinite;
@@ -34,13 +35,16 @@
   
   .container{
     position: relative;
+    float: left;
     display: flex;
+    margin: 150px;
     justify-content: center;
     align-items: center;
     max-width: 1200px;
     flex-wrap: wrap;
     z-index: 1;
   }
+
   
   .container .card{
     position: relative;
