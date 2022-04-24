@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<header>
+    <meta charset="utf-8">
+    <title>Analyse</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen" href="assets/css/style.css">
+</header>
+
+<body>
+    <h1>Analyse du match</h1>
+    <video controls="controls" onended="videoEnded()">
+        <source src="videos/video1.mp4">
+    </video>
+
+    <div class="container" id="video">
+        <div class="team">
+            <div class="card" id="0">
+                <input type="text" value="Joueur 1" onchange="updatePlayerName(this)">
+                <a href="#" class="button" onclick="kill(this)">Tué</a>
+                <a href="#" class="button" onclick="assist(this)">Assistance</a>
+                <a href="#" class="button" onclick="dead(this)">Mort</a>
+            </div>
+            <div class="card" id="1">
+                <input type="text" value="Joueur 2" onchange="updatePlayerName(this)">
+                <a href="#" class="button" onclick="kill(this)">Tué</a>
+                <a href="#" class="button" onclick="assist(this)">Assistance</a>
+                <a href="#" class="button" onclick="dead(this)">Mort</a>
+            </div>
+        </div>
+
+        <div class="team">
+            <div class="card" id="2">
+                <input type="text" value="Joueur 3" onchange="updatePlayerName(this)">
+                <a href="#" class="button" onclick="kill(this)">Tué</a>
+                <a href="#" class="button" onclick="assist(this)">Assistance</a>
+                <a href="#" class="button" onclick="dead(this)">Mort</a>
+            </div>
+            <div class="card" id="3">
+                <input type="text" value="Joueur 4" onchange="updatePlayerName(this)">
+                <a href="#" class="button" onclick="kill(this)">Tué</a>
+                <a href="#" class="button" onclick="assist(this)">Assistance</a>
+                <a href="#" class="button" onclick="dead(this)">Mort</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script-play.js"></script>
+</body>
+
+</html>
