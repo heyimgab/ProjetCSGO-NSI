@@ -186,10 +186,9 @@ video
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 150px;
+    margin: 5%;
     max-width: 1200px;
     flex-wrap: wrap;
-    z-index: 1;
   }
 
   .container2 .card2{
