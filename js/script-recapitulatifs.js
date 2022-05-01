@@ -1,4 +1,4 @@
-function recapitulatifs()
+function getAllJoueurs()
 {
     var allJoueurs = [];
 
@@ -112,7 +112,7 @@ function sortJoueur(array)
     });
 }
 
-function genTab()
+function genTab(joueurs)
 {
     var tab =
     `<thead>
@@ -126,16 +126,17 @@ function genTab()
     </thead>
     <tbody>`;
 
-    var AllJoueurs = recapitulatifs();
-    sortJoueur(AllJoueurs);
-
-    for(i = 0; i < AllJoueurs.length; i++)
+    for(i = 0; i < joueurs.length; i++)
     {
-        var kill = AllJoueurs[i].kill;
-        var dead = AllJoueurs[i].dead;
+        var kill = joueurs[i].kill;
+        var dead = joueurs[i].dead;
         var ratio = kill / dead;
     
         if(ratio == Infinity || isNaN(ratio))
+        {
+            ratio = 0;
+        }
+        else if(ratio == 0)
         {
             ratio = 0;
         }
@@ -146,9 +147,9 @@ function genTab()
     
         tab +=
         `<tr id="${i}">
-            <td>${AllJoueurs[i].name}</td>
+            <td>${joueurs[i].name}</td>
             <td>${kill}</td>
-            <td>${AllJoueurs[i].assist}</td>
+            <td>${joueurs[i].assist}</td>
             <td>${dead}</td>
             <td>${ratio}</td>
         </tr>`;
@@ -157,4 +158,11 @@ function genTab()
     return tab + `</tbody>`;
 }
 
-document.querySelector('.board').innerHTML = genTab();
+var AllJoueurs = getAllJoueurs();
+
+if(AllJoueurs.length > 0)
+{
+    sortJoueur(AllJoueurs);
+
+    document.querySelector('.board').innerHTML = genTab(AllJoueurs);
+}
