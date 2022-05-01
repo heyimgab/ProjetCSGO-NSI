@@ -6,7 +6,7 @@ function clicked()
 
 function genName()
 {
-    i = 1;
+    var i = 1;
     while(true)
     {
         if(!(`Match ${i}` in sessionStorage))

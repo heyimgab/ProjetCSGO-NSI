@@ -48,8 +48,8 @@ function update()
 
 function videoEnded()
 {
-    window.location.href = "recapitulatif.html";
+    window.location.href = "recapitulatifMatch.html";
 }
 
-joueurs = [new Joueur("Joueur 1"), new Joueur("Joueur 2"), new Joueur("Joueur 3"), new Joueur("Joueur 4")];
-matchName = sessionStorage.getItem('currentMatchName');
+var joueurs = [new Joueur("Joueur 1"), new Joueur("Joueur 2"), new Joueur("Joueur 3"), new Joueur("Joueur 4")];
+var matchName = sessionStorage.getItem('currentMatchName');

@@ -12,13 +12,14 @@ function genTab()
     </thead>
     <tbody>`;
 
+    var matchName = sessionStorage.getItem('currentMatchName');
     var joueurs = JSON.parse(sessionStorage.getItem(matchName));
 
     for(i = 0; i < joueurs.length; i++)
     {
-        kill = joueurs[i].kill;
-        dead = joueurs[i].dead;
-        ratio = (kill / dead);
+        var kill = joueurs[i].kill;
+        var dead = joueurs[i].dead;
+        var ratio = kill / dead;
     
         if(ratio == Infinity || isNaN(ratio))
         {
@@ -42,6 +43,5 @@ function genTab()
     return tab + `</tbody>`;
 }
 
-var matchName = sessionStorage.getItem('currentMatchName');
 
 document.querySelector('.board').innerHTML = genTab();
