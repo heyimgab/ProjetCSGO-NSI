@@ -43,7 +43,7 @@ function updatePlayerName(obj)
 
 function update()
 {
-    sessionStorage.setItem('clé', JSON.stringify(joueurs));
+    sessionStorage.setItem(matchName, JSON.stringify(joueurs));
 }
 
 function videoEnded()
@@ -52,3 +52,4 @@ function videoEnded()
 }
 
 joueurs = [new Joueur("Joueur 1"), new Joueur("Joueur 2"), new Joueur("Joueur 3"), new Joueur("Joueur 4")];
+matchName = sessionStorage.getItem('currentMatchName');
