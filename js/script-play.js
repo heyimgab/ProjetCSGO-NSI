@@ -14,7 +14,6 @@ function kill(obj)
     var id = obj.parentNode.id;
     var joueur = joueurs[id];
     joueur.kill++;
-    update()
 }
 
 function assist(obj)
@@ -22,7 +21,6 @@ function assist(obj)
     var id = obj.parentNode.id;
     var joueur = joueurs[id];
     joueur.assist++;
-    update()
 }
 
 function dead(obj)
@@ -30,7 +28,6 @@ function dead(obj)
     var id = obj.parentNode.id;
     var joueur = joueurs[id];
     joueur.dead++;
-    update()
 }
 
 function updatePlayerName(obj)
@@ -38,16 +35,11 @@ function updatePlayerName(obj)
     var id = obj.parentNode.id;
     var joueur = joueurs[id];
     joueur.name = obj.value;
-    update()
-}
-
-function update()
-{
-    sessionStorage.setItem(matchName, JSON.stringify(joueurs));
 }
 
 function videoEnded()
 {
+    sessionStorage.setItem(matchName, JSON.stringify(joueurs));
     window.location.href = "recapitulatifMatch.html";
 }
 
