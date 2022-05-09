@@ -11,10 +11,8 @@ function genName()
     {
         if(!(`Match ${i}` in sessionStorage))
         {
-            break;
+            return `Match ${i}`;
         }
         i++;
     }
-
-    return `Match ${i}`;
 }
